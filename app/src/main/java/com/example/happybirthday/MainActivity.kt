@@ -13,6 +13,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.happybirthday.ui.theme.HappyBirthdayTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    GreetingText(message = "Happy Birthday Yordi!")
                 }
             }
         }
@@ -34,7 +35,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingText(message: String, modifier: Modifier = Modifier) {
     Text(
-        text = message
+        text = message,
+        fontSize = 90.sp,
+        lineHeight = 116.sp
     )
 }
 
